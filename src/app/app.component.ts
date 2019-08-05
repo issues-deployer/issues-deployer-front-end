@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'issues-deployer-front-end';
+  title = 'Issues Deployer';
 }

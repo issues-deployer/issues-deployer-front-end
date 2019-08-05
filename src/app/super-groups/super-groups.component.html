@@ -1,0 +1,41 @@
+<main>
+  <section>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Short Name</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>URL</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let superGroup of superGroups">
+        <td>{{superGroup.id}}</td>
+        <td>{{superGroup.code | uppercase}}</td>
+        <td>{{superGroup.shortName}}</td>
+        <td>{{superGroup.name}}</td>
+        <td>{{superGroup.description}}</td>
+        <td><a href="{{superGroup.webUrl}}">URL</a></td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Short Name</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>URL</th>
+      </tr>
+      </tfoot>
+    </table>
+  </section>
+  <section>
+    <label>Super group name:
+      <input [(ngModel)]="superGroup2.name" placeholder="Super Group Name">
+    </label>
+  </section>
+</main>
