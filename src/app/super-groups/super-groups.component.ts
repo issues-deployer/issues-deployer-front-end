@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SuperGroup } from '../SuperGroup';
+import { SuperGroupService } from '../super-group.service';
 
 @Component({
   selector: 'app-super-groups',
@@ -8,23 +9,22 @@ import { SuperGroup } from '../SuperGroup';
 })
 export class SuperGroupsComponent implements OnInit {
 
-  superGroup2: SuperGroup = {
-    id: 2,
-    code: 'Test Code 2',
-    shortName: 'Test Short Name 2',
-    name: 'Test Name 2',
-    description: 'Test Description 2',
-    webUrl: 'http://google.com/1'
-  };
+  selectedSuperGroup: SuperGroup;
 
-  superGroups: SuperGroup[] = [
-    new SuperGroup(1, 'Test Code 1', 'Test Short Name 1', 'Test Name 1',
-      'Test Description 1', 'http://google.com/2'),
-    this.superGroup2
-  ];
+  superGroups: SuperGroup[];
 
-  constructor() { }
+  constructor(private superGroupService: SuperGroupService) { }
+
+  getSuperGroups(): void {
+    this.superGroupService.getSuperGroups()
+      .subscribe(superGroups => this.superGroups = superGroups);
+  }
 
   ngOnInit() {
+    this.getSuperGroups();
+  }
+
+  onSuperGroupSelect(superGroup: SuperGroup) {
+    this.selectedSuperGroup = superGroup;
   }
 }

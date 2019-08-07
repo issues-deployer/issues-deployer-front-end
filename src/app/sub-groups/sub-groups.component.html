@@ -1,0 +1,41 @@
+<section *ngIf="superGroup">
+  <table>
+    <caption>Sub groups</caption>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>URL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let subGroup of subGroups">
+      <td>{{subGroup.id}}</td>
+      <td>{{subGroup.code | uppercase}}</td>
+      <td>{{subGroup.shortName}}</td>
+      <td>{{subGroup.name}}</td>
+      <td>{{subGroup.description}}</td>
+      <td><a href="{{subGroup.webUrl}}" target="_blank">URL</a></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>URL</th>
+    </tr>
+    </tfoot>
+  </table>
+  <div *ngIf="superGroup">
+    <h2>{{superGroup.name | uppercase}} Details</h2>
+    <label>Super group name:
+      <input [(ngModel)]="superGroup.name" placeholder="Super Group Name">
+    </label>
+  </div>
+</section>

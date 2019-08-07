@@ -6,11 +6,15 @@ import {AppComponent} from './app.component';
 import {SuperGroupsComponent} from './super-groups/super-groups.component';
 
 import {FormsModule} from '@angular/forms';
+import {SubGroupsComponent} from './sub-groups/sub-groups.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SuperGroupsComponent
+    SuperGroupsComponent,
+    SubGroupsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
