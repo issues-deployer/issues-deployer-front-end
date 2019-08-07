@@ -17,7 +17,7 @@ export class SuperGroupsComponent implements OnInit {
     webUrl: 'http://google.com/1'
   };
 
-  superGroups = [
+  superGroups: SuperGroup[] = [
     new SuperGroup(1, 'Test Code 1', 'Test Short Name 1', 'Test Name 1',
       'Test Description 1', 'http://google.com/2'),
     this.superGroup2
@@ -27,5 +27,4 @@ export class SuperGroupsComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
