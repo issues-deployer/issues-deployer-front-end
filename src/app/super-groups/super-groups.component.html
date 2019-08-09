@@ -1,0 +1,38 @@
+<table *ngIf="superGroups.length">
+  <caption>Super Groups List</caption>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let superGroup of superGroups"
+        (click)="onSelectSuperGroup(superGroup)"
+        [class.selected]="selectedSuperGroup==superGroup">
+      <td>{{superGroup.id}}</td>
+      <td>{{superGroup.code | uppercase}}</td>
+      <td>{{superGroup.shortName}}</td>
+      <td>{{superGroup.name}}</td>
+      <td>{{superGroup.description}}</td>
+      <td><a href="{{superGroup.webUrl}}" target="_blank">URL</a></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>URL</th>
+    </tr>
+  </tfoot>
+</table>
+<div *ngIf="selectedSuperGroup">
+  <h3>{{selectedSuperGroup.name}}</h3>
+</div>
