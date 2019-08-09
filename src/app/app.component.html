@@ -6,12 +6,12 @@
 </header>
 <nav>
   <ul>
-    <li><a href="/dashboard">Dashboard</a></li>
-    <li><a href="/account">My Account</a></li>
+    <li><a routerLink="super-groups">Super Groups</a></li>
+    <li><a routerLink="account">My Account</a></li>
   </ul>
 </nav>
 <section>
-  <app-super-groups></app-super-groups>
+  <router-outlet></router-outlet>
   <app-messages></app-messages>
 </section>
 <footer>
@@ -19,5 +19,3 @@
     <h6>© 2019 Vadym Demchuk | All Rights Reserved</h6>
   </div>
 </footer>
-
-<router-outlet></router-outlet>

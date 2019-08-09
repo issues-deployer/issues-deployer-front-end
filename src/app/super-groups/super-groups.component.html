@@ -11,13 +11,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let superGroup of superGroups"
-        (click)="onSelectSuperGroup(superGroup)"
-        [class.selected]="selectedSuperGroup==superGroup">
+    <tr *ngFor="let superGroup of superGroups">
       <td>{{superGroup.id}}</td>
       <td>{{superGroup.code | uppercase}}</td>
       <td>{{superGroup.shortName}}</td>
-      <td>{{superGroup.name}}</td>
+      <td><a routerLink="/super-groups/{{superGroup.id}}">{{superGroup.name}}</a></td>
       <td>{{superGroup.description}}</td>
       <td><a href="{{superGroup.webUrl}}" target="_blank">URL</a></td>
     </tr>
@@ -33,6 +31,3 @@
     </tr>
   </tfoot>
 </table>
-<div *ngIf="selectedSuperGroup">
-  <h3>{{selectedSuperGroup.name}}</h3>
-</div>

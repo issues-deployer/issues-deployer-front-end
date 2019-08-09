@@ -10,7 +10,6 @@ import { SuperGroupService } from '../super-group.service';
 export class SuperGroupsComponent implements OnInit {
 
   superGroups: SuperGroup[] = [];
-  selectedSuperGroup: SuperGroup;
 
   constructor(private superGroupService: SuperGroupService) { }
 
@@ -21,9 +20,5 @@ export class SuperGroupsComponent implements OnInit {
   getSuperGroups(): void {
     this.superGroupService.getSuperGroups()
         .subscribe(superGroups => this.superGroups = superGroups);
-  }
-
-  onSelectSuperGroup(superGroup: SuperGroup): void {
-    this.selectedSuperGroup = superGroup;
   }
 }
