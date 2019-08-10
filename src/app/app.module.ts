@@ -8,6 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AccountComponent } from './account/account.component';
 import { SubGroupsComponent } from './sub-groups/sub-groups.component';
 import { GroupDetailComponent } from './group-detail/group-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GroupDetailComponent } from './group-detail/group-detail.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
