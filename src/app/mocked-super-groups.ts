@@ -1,4 +1,4 @@
-import { SuperGroup } from './SuperGroup';
+import {SuperGroup} from './SuperGroup';
 
 export const SUPER_GROUPS: SuperGroup[] = [
   new SuperGroup(

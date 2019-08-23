@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SuperGroupsComponent } from './super-groups.component';
+import {SuperGroupsComponent} from './super-groups.component';
 
 describe('SuperGroupsComponent', () => {
   let component: SuperGroupsComponent;
@@ -8,7 +8,7 @@ describe('SuperGroupsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SuperGroupsComponent ]
+      declarations: [SuperGroupsComponent]
     })
     .compileComponents();
   }));

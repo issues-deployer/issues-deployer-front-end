@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { TitleService } from '../title.service';
+import {Component, OnInit} from '@angular/core';
+import {TitleService} from '../title.service';
 
 @Component({
   selector: 'app-account',
@@ -7,12 +7,12 @@ import { TitleService } from '../title.service';
   styleUrls: ['./account.component.scss']
 })
 export class AccountComponent implements OnInit {
-  const TITLE: string = "My Account";
+  private TITLE = 'My Account';
 
-  constructor(private titleService: TitleService) { }
+  constructor(private titleService: TitleService) {
+  }
 
   ngOnInit() {
     this.titleService.setTitle(this.TITLE);
   }
-
 }

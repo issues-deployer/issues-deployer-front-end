@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { TitleService } from './title.service';
+import {Component} from '@angular/core';
+import {TitleService} from './title.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { TitleService } from './title.service';
 })
 export class AppComponent {
   title = 'Issues Deployer';
-  
+
   constructor(public titleService: TitleService) {
   }
 }

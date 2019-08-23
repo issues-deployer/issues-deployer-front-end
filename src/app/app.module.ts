@@ -1,22 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SuperGroupsComponent } from './super-groups/super-groups.component';
-import { MessagesComponent } from './messages/messages.component';
-import { AccountComponent } from './account/account.component';
-import { SubGroupsComponent } from './sub-groups/sub-groups.component';
-import { GroupDetailComponent } from './group-detail/group-detail.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {SuperGroupsComponent} from './super-groups/super-groups.component';
+import {MessagesComponent} from './messages/messages.component';
+import {AccountComponent} from './account/account.component';
+import {SubGroupsComponent} from './sub-groups/sub-groups.component';
+import {GroupDetailComponent} from './group-detail/group-detail.component';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
+import {GraphQLModule} from './graphql.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,12 @@ import {MatCardModule} from '@angular/material/card';
     NoopAnimationsModule,
     MatButtonModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,4 +1,4 @@
-<div fxLayout="column" class="bigger">
+<div class="bigger" fxLayout="column">
   <div fxLayout="row" fxLayoutAlign="start center">
     <header>
       <nav>
@@ -11,9 +11,9 @@
     </header>
   </div>
   <div fxLayout="row"
-       fxLayoutAlign="center center"
-       fxLayout.sm="column">
-    <section class="containerX" [ngStyle.lt-md]="{'margin': 0}">
+       fxLayout.sm="column"
+       fxLayoutAlign="center center">
+    <section [ngStyle.lt-md]="{'margin': 0}" class="containerX">
       <mat-card>
         <mat-card-title>{{ titleService.getTitle() }}</mat-card-title>
         <mat-card-content>
