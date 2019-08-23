@@ -1,21 +1,35 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<header>
-  <div style="text-align:center">
-    <h1>Welcome to {{ title }}!</h1>
+<div fxLayout="column" class="bigger">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <header>
+      <nav>
+        <mat-toolbar>
+          <span routerLink="/">{{ title }}</span>
+          <a mat-button routerLink="super-groups">Super Groups</a>
+          <a mat-button routerLink="account">Account</a>
+        </mat-toolbar>
+      </nav>
+    </header>
   </div>
-</header>
-<nav>
-  <ul>
-    <li><a routerLink="super-groups">Super Groups</a></li>
-    <li><a routerLink="account">My Account</a></li>
-  </ul>
-</nav>
-<section>
-  <router-outlet></router-outlet>
-  <app-messages></app-messages>
-</section>
-<footer>
-  <div style="text-align:center">
-    <h6>© 2019 Vadym Demchuk | All Rights Reserved</h6>
+  <div fxLayout="row"
+       fxLayoutAlign="center center"
+       fxLayout.sm="column">
+    <section class="containerX" [ngStyle.lt-md]="{'margin': 0}">
+      <mat-card>
+        <mat-card-title>{{ titleService.getTitle() }}</mat-card-title>
+        <mat-card-content>
+          <router-outlet></router-outlet>
+        </mat-card-content>
+      </mat-card>
+    </section>
   </div>
-</footer>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <app-messages></app-messages>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <footer>
+      <div style="text-align:center">
+        <h6>© 2019 Vadym Demchuk | All Rights Reserved</h6>
+      </div>
+    </footer>
+  </div>
+</div>

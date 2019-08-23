@@ -2,3 +2,15 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-toolbar > span {
+  margin-right: 10px;
+}
+
+header {
+  width: 100%;
+}
+
+.containerX {
+  margin: 20px;
+}
